@@ -1,4 +1,6 @@
 def find_out_if_sum_equal_k(list, k) :
+    if len(list) < 2 :
+        return False
     list = sorted(list)
     j = len(list) - 1
     i = 0

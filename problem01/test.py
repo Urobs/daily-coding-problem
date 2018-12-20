@@ -1,4 +1,5 @@
 import unittest
+import random
 
 from index import find_out_if_sum_equal_k
 
@@ -27,6 +28,13 @@ class TestResult(unittest.TestCase):
         dist = [0]
         answer = find_out_if_sum_equal_k(dist, 0)
         self.assertFalse(answer)
+
+    def test_big_length_list_case(self):
+        source_list = list(range(0, 100))
+        dist = random.sample(source_list, 10)
+        print(dist)
+        answer = find_out_if_sum_equal_k(dist, 40)
+        print(answer)
 
 if __name__ == '__main__':
     unittest.main()
