@@ -16,6 +16,15 @@ class TestResult(unittest.TestCase):
 
     def test_mutiple_missing(self):
         result = find_first_missing_integer([-3 , -1, 1, 3, 5, 7, 9])
-        self.assertEqual(result, 2)    
+        self.assertEqual(result, 2)
+
+    def test_example_online(self):
+        result_1 = find_first_missing_integer([2, 3, 7, 6, 8, -1, -10, 15])
+        result_2 = find_first_missing_integer([2, 3, -7, 6, 8, 1, -10, 15])
+        result_3 = find_first_missing_integer([1, 1, 0, -1, -2])
+        self.assertEqual(result_1, 1)
+        self.assertEqual(result_2, 4)
+        self.assertEqual(result_3, 2)
+
 if __name__ == '__main__':
     unittest.main()
