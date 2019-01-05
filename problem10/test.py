@@ -1,5 +1,5 @@
-from index import call_f_after, test
+from index import job_scheduler, test
 
 if __name__ == '__main__':
-    call_f_after(test, 1000)
+    job_scheduler(test, 1000)
     print('i run first')
